@@ -1,6 +1,6 @@
 class TieredDelivery
   def initialize(tiers)
-    @tiers = tiers.map { |range, cost| [range, BigDecimal(cost.to_s)] }
+    @tiers = tiers.map { |range, cost| [ range, BigDecimal(cost.to_s) ] }
   end
 
   def charge_for(subtotal)

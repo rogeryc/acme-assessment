@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe TieredDelivery do
   subject(:delivery) do
-    described_class.new([[0...50, "4.95"], [50...90, "2.95"], [90.., 0]])
+    described_class.new([ [ 0...50, "4.95" ], [ 50...90, "2.95" ], [ 90.., 0 ] ])
   end
 
   describe "#charge_for" do
