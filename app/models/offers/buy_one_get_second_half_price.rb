@@ -9,7 +9,8 @@ module Offers
       pairs = matching.size / 2
       return BigDecimal("0") if pairs.zero?
 
-      pairs * (matching.first.price / 2)
+      price = matching.first.price
+      pairs * (price - (price / 2).floor(2))
     end
   end
 end
